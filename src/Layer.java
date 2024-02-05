@@ -1,11 +1,8 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Layer<T extends Mappable> {
-  private List<T> elements;
-
-  public Layer(List<T> elements) {
-    this.elements = elements;
-  }
+  private List<T> elements = new ArrayList<>();
 
   public void renderLayer() {
     for (Mappable element : elements) {
@@ -14,6 +11,6 @@ public class Layer<T extends Mappable> {
   }
 
   public void addElement(T element) {
-    elements.add(element);
+    this.elements.add(element);
   }
 }
