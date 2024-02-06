@@ -1,6 +1,17 @@
-public class Line implements Mappable {
-  @Override
-  public void render() {
+import java.util.ArrayList;
+import java.util.List;
 
+abstract class Line implements Mappable {
+  private List<List<Double>> points = new ArrayList<>();
+
+  public void addPoint(double x, double y) {
+    List<Double> point = new ArrayList<>();
+    point.add(x);
+    point.add(y);
+    points.add(point);
+  }
+
+  public List<List<Double>> getPoints() {
+    return points;
   }
 }

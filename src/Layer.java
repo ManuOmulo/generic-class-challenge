@@ -11,6 +11,6 @@ public class Layer<T extends Mappable> {
   }
 
   public void addElement(T element) {
-    this.elements.add(element);
+    elements.add(element);
   }
 }
